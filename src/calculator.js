@@ -19,22 +19,22 @@
  */
 
 // Adição: a + b
-function add(a, b) {
+function addition(a, b) {
   return a + b;
 }
 
 // Subtração: a - b
-function subtract(a, b) {
+function subtraction(a, b) {
   return a - b;
 }
 
 // Multiplicação: a * b
-function multiply(a, b) {
+function multiplication(a, b) {
   return a * b;
 }
 
 // Divisão: a / b (divisão por zero é um erro)
-function divide(a, b) {
+function division(a, b) {
   if (b === 0) {
     throw new Error('Divisão por zero não é permitida.');
   }
@@ -42,14 +42,14 @@ function divide(a, b) {
 }
 
 const operations = {
-  add,
-  '+': add,
-  subtract,
-  '-': subtract,
-  multiply,
-  '*': multiply,
-  divide,
-  '/': divide,
+  add: addition,
+  '+': addition,
+  subtract: subtraction,
+  '-': subtraction,
+  multiply: multiplication,
+  '*': multiplication,
+  divide: division,
+  '/': division,
 };
 
 function main(args) {
@@ -81,4 +81,4 @@ if (require.main === module) {
   process.exitCode = main(process.argv.slice(2));
 }
 
-module.exports = { add, subtract, multiply, divide };
+module.exports = { addition, subtraction, multiplication, division };
